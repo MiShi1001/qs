@@ -32,7 +32,11 @@
         </form>
     </div>
 
-    <!-- 代辦：目前任務 --> @if (count($tasks) > 0)
+@section('content')
+    <!-- 建立任務表單... -->
+
+    <!-- 目前任務 -->
+    @if (count($tasks) > 0)
         <div class="panel panel-default">
             <div class="panel-heading">
                 目前任務
@@ -51,15 +55,6 @@
                     <tbody>
                     @foreach ($tasks as $task)
                         <tr>
-                            <!-- 任務名稱 -->
-                            <td class="table-text">
-                                <div>{{ $task->name }}</div>
-                            </td>
-
-                            <td>
-                                <!-- 代辦：刪除按鈕 -->
-
-                            </td><tr>
                             <!-- 任務名稱 -->
                             <td class="table-text">
                                 <div>{{ $task->name }}</div>
